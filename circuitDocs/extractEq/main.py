@@ -1,5 +1,8 @@
 """
-Print out eng page and equipment
+Crawl circuit documentation and return core data from circuit.
+
+This is a script that I used to find the SN of the equipment to match
+the account for balancing.
 
 Author: Christian M. Fulton
 Date: 26.Nov.2021
