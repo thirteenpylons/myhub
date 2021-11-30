@@ -1,0 +1,1 @@
+Extracted data from Excel spreadsheet with this script.
