@@ -7,6 +7,7 @@ the account for balancing.
 Author: Christian M. Fulton
 Date: 26.Nov.2021
 """
+
 import os
 from openpyxl import load_workbook as LW
 
@@ -27,13 +28,9 @@ for subdir, dirs, files in os.walk():
                 contents[str(name)] = str(eng), str(acc), str(equipment)
                 print("Successfully extracted...")
             except:
-                print(f"Failed to extract...")
+                print('Failed to extract...')
 
-l = []
-for k in contents:
-    if contents[k] != "None":
-        l.append(f"{k} {contents[k]}")
-
+l = [f'{k} {v}' for k, v in contents.items() if contents[k] != "None"]
 for x in l:
     with open("equipment.txt", "a") as jfile:
         jfile.write(f"{x}\n")
